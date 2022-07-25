@@ -18,22 +18,90 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Sam Burden
+email: sburden@uw.edu
+logo: images/sburdensq.png
+description: Assoc Prof in ECE at UW Seattle 
+#baseurl: "" # the subpath of your site, e.g. /blog
+
+url: http://localhost:4000
+#url: /sburden
+
+date_format: "%Y/%m/%d"  
 
 # Build settings
 #theme: minima
-theme: jekyll-theme-so-simple
+remote_theme: "mmistakes/so-simple-theme@3.2.0"
 plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
+
+mathjax:
+  enable: true
+
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
+#google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
+twitter:
+  username: SamBurdenUW
+
+# Liquid
+liquid:
+  error_mode: strict
+
+# Build settings
+markdown: kramdown
+feed:
+  path: atom.xml
+
+# Pagination - https://jekyllrb.com/docs/pagination/
+paginate: 10
+paginate_path: /page:num/
+
+# Search
+search_full_content: false
+
+# Taxonomy pages
+category_archive_path: "/categories/#"
+tag_archive_path: "/tags/#"
+
+# Site owner
+author:
+  name: Sam Burden
+  avatar: sburdensq.png
+  email: sburden@uw.edu
+  github: sburden 
+  linkedin: sam-burden 
+  scholar: I9KPV_MAAAAJ 
+  arxiv: burden_samuel
+  orcid: 0000-0002-2705-7395
+  twitter: SamBurdenUW
+
+footer_links:
+    - title: Twitter
+      url: https://twitter.com/SamBurdenUW
+      icon: fab fa-twitter-square
+    - title: arXiv
+      url: https://arxiv.org/find/all/1/au:+burden_samuel/0/1/0/all/0/1
+      icon: fa fa-file
+    - title: Google Scholar
+      url: https://scholar.google.com/citations?user=I9KPV_MAAAAJ 
+      icon: fab fa-google
+    - title: ORCID
+      url: https://orcid.org/0000-0002-2705-7395
+      icon: fa fa-orcid
+    - title: GitHub
+      url: https://github.com/sburden
+      icon: fab fa-github-square
+    - title: LinkedIn
+      url: https://linkedin.com/in/sam-burden
+      icon: fab fa-linkedin
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
